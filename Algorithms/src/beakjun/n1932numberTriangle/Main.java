@@ -1,4 +1,4 @@
-package beakjun.n1931numberTriangle;
+package beakjun.n1932numberTriangle;
 
 import java.io.*;
 import java.util.*;
