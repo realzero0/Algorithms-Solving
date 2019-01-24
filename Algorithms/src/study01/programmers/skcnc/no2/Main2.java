@@ -3,7 +3,8 @@ package study01.programmers.skcnc.no2;
 public class Main2 {
 
 }
-public class Solution2 {
+
+class Solution2 {
 	public int solution(int[][] board, int[] nums) {
     	int bingoCount = 2 * board.length + 2;
     	for(int i = 0; i<nums.length; i++) {

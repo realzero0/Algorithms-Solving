@@ -1,6 +1,7 @@
 package study01;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
 
@@ -13,6 +14,7 @@ public class Main {
 }
 
 class Solution {
+	private static final int N = 1;
 	int[] goArr = new int[N + 1];
 
 	public int solution(int N, int[][] road, int K) {
@@ -53,7 +55,7 @@ class Solution {
 				dfs(new Node(road[i][1], node.value+road[i][2]), N, road, K);
 			}
 			if (road[i][1] == node.num) {
-				goArr[road[i][1]] = node.value+road[i][2];s
+				goArr[road[i][1]] = node.value + road[i][2];
 				dfs(new Node(road[i][1], node.value+road[i][2]), N, road, K);
 			}
 		}

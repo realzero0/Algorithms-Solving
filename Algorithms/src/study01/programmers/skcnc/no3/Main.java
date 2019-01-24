@@ -1,12 +1,13 @@
 package study01.programmers.skcnc.no3;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
 
 }
 
-public class Solution {
+class Solution {
 	int solution(int[][] board, int K, int Ax, int Ay, int Bx, int By) {
 		final int[] DX = { 0, 0, -1, 1 }; // 상, 하, 좌, 우
 		final int[] DY = { -1, 1, 0, 0 };
