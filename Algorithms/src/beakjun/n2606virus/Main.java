@@ -34,16 +34,17 @@ public class Main {
 
         LinkedList<Integer> queue = new LinkedList<>();
         queue.add(1);
+        visited[1] = true;
 
         int i = 0;
         while (!queue.isEmpty()) {
             int start = queue.remove();
-            visited[start] = true;
             List<Integer> endList = computerMap.get(start);
             for (Integer end : endList) {
                 if (visited[end]) {
                     continue;
                 }
+                visited[end] = true;
                 i++;
                 queue.add(end);
             }
