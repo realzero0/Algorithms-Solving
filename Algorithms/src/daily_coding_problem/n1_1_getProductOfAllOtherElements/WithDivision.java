@@ -16,7 +16,7 @@ public class WithDivision {
         int elementCount = st.countTokens();
         long[] input = new long[elementCount];
         for (int i = 0; i < elementCount; i++) {
-            input[i] = Integer.parseInt(st.nextToken());
+            input[i] = Long.parseLong(st.nextToken());
         }
 
         System.out.println(Arrays.toString(solution(input)));
