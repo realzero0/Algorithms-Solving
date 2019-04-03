@@ -1,4 +1,4 @@
-package daily_coding_problem.n1_1_getProductOfAllOtherElements;
+package daily_coding_problem.chapter1_arrays.n1_1_getProductOfAllOtherElements;
 
 import java.io.BufferedReader;
 import java.io.IOException;

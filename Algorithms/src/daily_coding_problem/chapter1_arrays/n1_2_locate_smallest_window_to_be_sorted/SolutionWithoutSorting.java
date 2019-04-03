@@ -1,4 +1,4 @@
-package daily_coding_problem.n1_2_locate_smallest_window_to_be_sorted;
+package daily_coding_problem.chapter1_arrays.n1_2_locate_smallest_window_to_be_sorted;
 
 import java.io.BufferedReader;
 import java.io.IOException;
