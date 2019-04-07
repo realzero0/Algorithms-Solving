@@ -1,4 +1,4 @@
-package daily_coding_problem.chapter1_arrays.n1_1_getProductOfAllOtherElements;
+package leetcode.arrays.n238_Product_of_Array_Except_Self;
 
 import java.io.BufferedReader;
 import java.io.IOException;
