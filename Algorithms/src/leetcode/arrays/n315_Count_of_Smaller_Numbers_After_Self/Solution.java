@@ -3,8 +3,7 @@ package leetcode.arrays.n315_Count_of_Smaller_Numbers_After_Self;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -25,19 +24,35 @@ class Solution {
     }
 
     public static List<Integer> countSmaller(int[] nums) {
-        List<Integer> result = new LinkedList<>();
-        List<Integer> comparisonList = new LinkedList<>();
+        List<Integer> result = new ArrayList<>();
+        List<Integer> comparisonList = new ArrayList<>();
+        int[] calculatedValues = new int[nums.length];
         for (int i = nums.length - 1; i >= 0; i--) {
-            int value = 0;
-            if(!comparisonList.isEmpty()) {
-                value = Collections.binarySearch(comparisonList, nums[i]);
-                if(value < 0) {
-                    value = -value - 1;
-                }
-            }
+            int value = binarySearch(comparisonList, nums[i]);
             comparisonList.add(value, nums[i]);
-            result.add(0, value);
+            calculatedValues[i] = value;
+        }
+        for (int val : calculatedValues) {
+            result.add(val);
         }
         return result;
+    }
+
+    private static int binarySearch(List<Integer> comparisonList, int target) {
+        int right = comparisonList.size() - 1;
+        int left = 0;
+        if (comparisonList.size() == 1) {
+            return target > comparisonList.get(0) ? 1 : 0;
+        }
+
+        while (left <= right) {
+            int medium = (left + right) / 2;
+            if (target > comparisonList.get(medium)) {
+                left = medium + 1;
+            } else {
+                right = medium - 1;
+            }
+        }
+        return left;
     }
 }
