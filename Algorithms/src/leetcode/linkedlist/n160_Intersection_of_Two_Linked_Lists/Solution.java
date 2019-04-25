@@ -43,7 +43,7 @@ public class Solution {
         return headAStack.get(headAStackSize);
     }
 
-    public class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
 
